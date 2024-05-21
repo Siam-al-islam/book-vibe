@@ -1,0 +1,104 @@
+[
+    {
+        "bookId": "1",
+        "bookName": "The Great Gatsby",
+        "author": "F. Scott Fitzgerald",
+        "image": "https://i.postimg.cc/7ZbFHGJ3/gastby.png",
+        "review": "A classic novel exploring wealth, love, and the American Dream through the tragic story of Jay Gatsby and his unrequited love for Daisy Buchanan.",
+        "totalPages": 180,
+        "rating": 4.5,
+        "category": "Fiction",
+        "tags": [
+            "classic",
+            "novel",
+            "1920s"
+        ],
+        "publisher": "Charles Scribner's Sons",
+        "yearOfPublishing": 1925
+    },
+    {
+        "bookId": "2",
+        "bookName": "To Kill a Mockingbird",
+        "author": "Harper Lee",
+        "image": "https://i.postimg.cc/ZKYkQDTD/toKill.png",
+        "review": "A profound exploration of racial injustice in the Deep South, seen through the eyes of young Scout Finch, whose father, Atticus, defends a wrongfully accused black man.",
+        "totalPages": 281,
+        "rating": 4.8,
+        "category": "Fiction",
+        "tags": [
+            "classic",
+            "civil rights",
+            "coming of age"
+        ],
+        "publisher": "J.B. Lippincott & Co.",
+        "yearOfPublishing": 1960
+    },
+    {
+        "bookId": "3",
+        "bookName": "1984",
+        "author": "George Orwell",
+        "image": "https://i.postimg.cc/wTWKYcMx/orwell.png",
+        "review": "A dystopian novel warning against totalitarianism, following Winston Smith as he navigates a society under oppressive surveillance and control by the Party and Big Brother.",
+        "totalPages": 328,
+        "rating": 4.6,
+        "category": "Science Fiction",
+        "tags": [
+            "dystopian",
+            "political",
+            "classic"
+        ],
+        "publisher": "Secker & Warburg",
+        "yearOfPublishing": 1949
+    },
+    {
+        "bookId": "4",
+        "bookName": "Pride and Prejudice",
+        "author": "Jane Austen",
+        "image": "https://i.postimg.cc/XNkSQ00C/pride.png",
+        "review": "A timeless romance that critiques societal expectations through the story of Elizabeth Bennet and Mr. Darcy's evolving relationship amid themes of love and social status.",
+        "totalPages": 279,
+        "rating": 4.7,
+        "category": "Romance",
+        "tags": [
+            "classic",
+            "romance",
+            "19th century"
+        ],
+        "publisher": "T. Egerton",
+        "yearOfPublishing": 1813
+    },
+    {
+        "bookId": "5",
+        "bookName": "The Catcher in the Rye",
+        "author": "J.D. Salinger",
+        "image": "https://i.postimg.cc/J0MwMpj0/catcher.png",
+        "review": "Capturing teenage angst and alienation, this novel follows Holden Caulfield's experiences in New York City after being expelled from prep school.",
+        "totalPages": 214,
+        "rating": 4.3,
+        "category": "Fiction",
+        "tags": [
+            "classic",
+            "coming of age",
+            "teenage"
+        ],
+        "publisher": "Little, Brown and Company",
+        "yearOfPublishing": 1951
+    },
+    {
+        "bookId": "6",
+        "bookName": "The Hobbit",
+        "author": "J.R.R. Tolkien",
+        "image": "https://i.postimg.cc/x8RwCLPR/hobbit-cover-670x1024.jpg",
+        "review": "An enchanting fantasy following Bilbo Baggins on an unexpected adventure with dwarves to reclaim a lost kingdom, encountering dragons, trolls, and more.",
+        "totalPages": 310,
+        "rating": 4.9,
+        "category": "Fantasy",
+        "tags": [
+            "fantasy",
+            "adventure",
+            "classic"
+        ],
+        "publisher": "George Allen & Unwin",
+        "yearOfPublishing": 1937
+    }
+]
