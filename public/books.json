@@ -27,8 +27,7 @@
         "category": "Fiction",
         "tags": [
             "classic",
-            "civil rights",
-            "coming of age"
+            "civil rights"
         ],
         "publisher": "J.B. Lippincott & Co.",
         "yearOfPublishing": 1960
@@ -37,13 +36,12 @@
         "bookId": "3",
         "bookName": "1984",
         "author": "George Orwell",
-        "image": "https://i.postimg.cc/wTWKYcMx/orwell.png",
+        "image": "https://i.postimg.cc/D02MPdnm/61-Zew-DE3be-L-AC-UF1000-1000-QL80.jpg",
         "review": "A dystopian novel warning against totalitarianism, following Winston Smith as he navigates a society under oppressive surveillance and control by the Party and Big Brother.",
         "totalPages": 328,
         "rating": 4.6,
         "category": "Science Fiction",
         "tags": [
-            "dystopian",
             "political",
             "classic"
         ],
@@ -54,13 +52,12 @@
         "bookId": "4",
         "bookName": "Pride and Prejudice",
         "author": "Jane Austen",
-        "image": "https://i.postimg.cc/XNkSQ00C/pride.png",
+        "image": "https://i.postimg.cc/qRcFKZf9/61-H3-Bv-N-na-L-AC-UF1000-1000-QL80.jpg",
         "review": "A timeless romance that critiques societal expectations through the story of Elizabeth Bennet and Mr. Darcy's evolving relationship amid themes of love and social status.",
         "totalPages": 279,
         "rating": 4.7,
         "category": "Romance",
         "tags": [
-            "classic",
             "romance",
             "19th century"
         ],
@@ -78,7 +75,6 @@
         "category": "Fiction",
         "tags": [
             "classic",
-            "coming of age",
             "teenage"
         ],
         "publisher": "Little, Brown and Company",
@@ -95,10 +91,58 @@
         "category": "Fantasy",
         "tags": [
             "fantasy",
-            "adventure",
-            "classic"
+            "adventure"
         ],
         "publisher": "George Allen & Unwin",
         "yearOfPublishing": 1937
+    },
+    {
+        "bookId": "7",
+        "bookName": "Moby-Dick",
+        "author": "Herman Melville",
+        "image": "https://i.postimg.cc/G3kG1nrF/moby.jpg",
+        "review": "A seafaring adventure and a profound examination of obsession, as Captain Ahab hunts the elusive white whale, Moby-Dick, across the oceans.",
+        "totalPages": 585,
+        "rating": 4.2,
+        "category": "Fiction",
+        "tags": [
+            "classic",
+            "adventure",
+            "sea"
+        ],
+        "publisher": "Harper & Brothers",
+        "yearOfPublishing": 1851
+    },
+    {
+        "bookId": "8",
+        "bookName": "The Alchemist",
+        "author": "Paulo Coelho",
+        "image": "https://i.postimg.cc/1Xcq0wMC/alchemist.jpg",
+        "review": "A philosophical tale about Santiago, a shepherd boy, who dreams of finding a worldly treasure and embarks on a journey of self-discovery and personal legend.",
+        "totalPages": 208,
+        "rating": 4.7,
+        "category": "Adventure",
+        "tags": [
+            "philosophical",
+            "journey"
+        ],
+        "publisher": "HarperOne",
+        "yearOfPublishing": 1988
+    },
+    {
+        "bookId": "9",
+        "bookName": "Brave New World",
+        "author": "Aldous Huxley",
+        "image": "https://i.postimg.cc/9FCTmgFv/new-world.jpg",
+        "review": "A dystopian vision of a future society controlled by technology and conformity, where human emotions and individuality are suppressed for the sake of stability.",
+        "totalPages": 268,
+        "rating": 4.4,
+        "category": "Science Fiction",
+        "tags": [
+            "future",
+            "classic"
+        ],
+        "publisher": "Chatto & Windus",
+        "yearOfPublishing": 1932
     }
 ]
