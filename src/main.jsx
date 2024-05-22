@@ -8,6 +8,7 @@ import {
 import Root from './Components/Root/Root.jsx';
 import ErrorPage from './Components/ErrorPage/ErrorPage.jsx';
 import Home from './Components/Home/Home.jsx';
+import BookDetails from './Components/BookDetails/BookDetails.jsx';
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,11 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />
+      },
+      {
+        path: "/book/:bookId",
+        element: <BookDetails />,
+        loader: () => fetch('/public/books.json')
       }
     ]
   },
@@ -26,5 +32,5 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <RouterProvider router={router} />
-  </React.StrictMode>,
+  </React.StrictMode>
 )
