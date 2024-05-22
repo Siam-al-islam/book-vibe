@@ -6,10 +6,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-    padding: 0px 10px 0px 10px;
-}
-
 .font-worksans {
     font-family: "Work Sans", sans-serif;
 }

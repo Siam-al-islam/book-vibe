@@ -1,11 +1,15 @@
 import { Outlet } from "react-router-dom";
 import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
 
 const Root = () => {
     return (
-        <div className="max-w-[1170px] mx-auto font-worksans">
-            <Header />
-            <Outlet />
+        <div>
+            <div className="max-w-[1170px] mx-auto px-3">
+                <Header />
+                <Outlet />
+            </div>
+            <Footer />
         </div>
     );
 };
