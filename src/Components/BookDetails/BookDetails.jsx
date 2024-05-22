@@ -1,7 +1,8 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
-import { saveBooks } from "../../Utility/localStorage";
+import { saveReadBooks, saveWishlistBooks } from "../../Utility/localStorage";
+import { useState } from "react";
 
 const BookDetails = () => {
     const books = useLoaderData();
@@ -10,13 +11,32 @@ const BookDetails = () => {
     const book = books.find(book => book.bookId == idInt);
     const { bookName, author, image, review, totalPages, rating, category, tags, publisher, yearOfPublishing } = book;
 
+    const [readAdded, setReadAdded] = useState(false)
+    const [wishlistAdded, setWishlistAdded] = useState(true)
+
     const handleRead = () => {
-        saveBooks(idInt)
-        toast("Book Added to Read List successfully");
+        if (readAdded) {
+            toast.warning("Already Added to Read List")
+        }
+        else {
+            setReadAdded(true)
+            saveReadBooks(idInt)
+            toast.success("Book Added to Read List successfully");
+        }
     }
 
     const handleWishlist = () => {
-        toast("Book Added To Wishlist");
+        if (!wishlistAdded) {
+            toast.warning("Already Added to Wishlist")
+        }
+        else if (readAdded) {
+            toast.warning("You Have Already Read This Book")
+        }
+        else {
+            saveWishlistBooks(idInt)
+            setWishlistAdded(false);
+            toast.success("Book Added To Wishlist");
+        }
     }
 
     return (
