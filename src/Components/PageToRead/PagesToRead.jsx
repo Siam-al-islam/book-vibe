@@ -1,28 +1,22 @@
+import { useLoaderData } from "react-router-dom";
 import { Bar, BarChart, Cell, ResponsiveContainer, XAxis, YAxis } from "recharts";
+import { getStoredReadBooks } from "../../Utility/localStorage";
+import { useEffect, useState } from "react";
 
 const PagesToRead = () => {
-    const data = [
-        {
-            "name": "Alice Johnson",
-            "math_result": 92
-        },
-        {
-            "name": "Bob Smith",
-            "math_result": 85
-        },
-        {
-            "name": "Charlie Davis",
-            "math_result": 78
-        },
-        {
-            "name": "Diana Evans",
-            "math_result": 88
-        },
-        {
-            "name": "Ethan Brown",
-            "math_result": 57
+    const storedReadBooksIds = getStoredReadBooks();
+
+    const [addedBooks, setAddedBooks] = useState([]);
+
+
+    const booksData = useLoaderData();
+
+    useEffect(() => {
+        if (booksData.length) {
+            const booksRead = booksData.filter(book => storedReadBooksIds.includes(Number(book.bookId)));
+            setAddedBooks(booksRead);
         }
-    ];
+    }, []);
 
     const colors = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', 'red', 'pink'];
 
@@ -43,12 +37,12 @@ const PagesToRead = () => {
     return (
         <div className="mt-12 max-w-[1000px] mx-auto">
             <ResponsiveContainer width="100%" height={500}>
-                <BarChart data={data} >
+                <BarChart data={addedBooks.map(book => book.totalPages)} >
                     {/* <Bar dataKey={"name"}></Bar> */}
-                    <XAxis dataKey={"name"} />
+                    <XAxis dataKey={addedBooks.bookName} />
                     <YAxis />
-                    <Bar dataKey={"math_result"} shape={<TriangleBar />}>
-                        {data.map((entry, index) => (
+                    <Bar dataKey={"totalPages"} shape={<TriangleBar />}>
+                        {booksData.map((entry, index) => (
                             <Cell key={`cell-${index}`} fill={colors[index % 20]} />
                         ))}
                     </Bar>
