@@ -1,42 +1,54 @@
 import { useEffect, useState } from "react";
 import { NavLink, useLoaderData } from "react-router-dom";
-import { getStoredReadBooks } from "../../Utility/localStorage";
+import { getStoredReadBooks, getStoredWishlistBooks } from "../../Utility/localStorage";
 import SingleListedBook from "../DisplayListedBooks/SingleListedBook";
+
 const ListedBooks = () => {
     const books = useLoaderData();
 
-    const [readBooks, setReadBooks] = useState([]);
-    // const [wishlistBooks, setWishlistBook] = useState([]);
+    const [addedBooks, setAddedBooks] = useState([]);
     const [displayBooks, setDisplayBooks] = useState([]);
+
+    const storedReadBooksIds = getStoredReadBooks();
+    const storedWishListIds = getStoredWishlistBooks();
+
+    useEffect(() => {
+        if (books.length) {
+            const booksRead = books.filter(book => storedReadBooksIds.includes(Number(book.bookId)));
+            setAddedBooks(booksRead);
+            setDisplayBooks(booksRead);
+        }
+    }, []);
 
     const hanldeBookFilter = (filter) => {
         if (filter === 'rating') {
-            const bookRating = readBooks.filter(book => book.rating > 0);
+            const bookRating = addedBooks.filter(book => book.rating > 0);
             bookRating.sort((a, b) => b.rating - a.rating);
             setDisplayBooks(bookRating);
         }
         else if (filter === 'pages') {
-            const bookPages = readBooks.sort((a, b) => b.totalPages - a.totalPages);
+            const bookPages = addedBooks.sort((a, b) => b.totalPages - a.totalPages);
             setDisplayBooks(bookPages);
         }
         else if (filter === 'publishYear') {
-            const bookPublishYear = readBooks.sort((a, b) => b.yearOfPublishing - a.yearOfPublishing);
+            const bookPublishYear = addedBooks.sort((a, b) => +b.yearOfPublishing - +a.yearOfPublishing);
             setDisplayBooks(bookPublishYear);
         }
     };
 
-    useEffect(() => {
-        const storedReadBooksIds = getStoredReadBooks();
+    const hanldeReadBooks = () => {
         if (books.length) {
-            const booksRead = books.filter(book => storedReadBooksIds.includes(book.bookId))
-            // console.log("books", books)
-            setReadBooks(booksRead);
-            // console.log('books read', booksRead)
-            // console.log('stored id', storedReadBooksIds)
+            const booksRead = books.filter(book => storedReadBooksIds.includes(Number(book.bookId)))
             setDisplayBooks(booksRead);
         }
-    }, [books])
+    }
 
+    const hanldeWishlistBooks = () => {
+        if (books.length) {
+            const wishlistBooks = books.filter(book => storedWishListIds.includes(Number(book.bookId)))
+            setDisplayBooks(wishlistBooks);
+        }
+    }
     return (
         <div className="mt-9">
             <div className="bg-[#1313130c] py-8 rounded-2xl">
@@ -60,11 +72,11 @@ const ListedBooks = () => {
                 </div>
             </div>
             <div className="flex">
-                <NavLink className="px-5 py-3">Read Books</NavLink>
-                <NavLink className="px-5 py-3">Wishlist Books</NavLink>
+                <NavLink className="px-5 py-3" onClick={hanldeReadBooks}>Read Books</NavLink>
+                <NavLink className="px-5 py-3" onClick={hanldeWishlistBooks}>Wishlist Books</NavLink>
             </div>
 
-            <div className="mt-8">
+            <div className="mt-8 space-y-6">
                 {
                     displayBooks.map(book => <SingleListedBook key={book.bookId} book={book} />)
                 }
