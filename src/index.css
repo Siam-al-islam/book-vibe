@@ -21,3 +21,7 @@ nav .active {
     border-radius: 8px;
     background-color: white !important;
 }
+
+.active {
+    color: #0a31be !important;
+}
