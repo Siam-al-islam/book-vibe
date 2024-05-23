@@ -11,6 +11,7 @@ import Home from './Components/Home/Home.jsx';
 import BookDetails from './Components/BookDetails/BookDetails.jsx';
 import ListedBooks from './Components/ListedBooks/ListedBooks.jsx';
 import PagesToRead from './Components/PageToRead/PagesToRead.jsx';
+import KidsZone from './Components/KidsZone/KidsZone.jsx';
 
 const router = createBrowserRouter([
   {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
       {
         path: "/pagestoread",
         element: <PagesToRead />
+      },
+      {
+        path: "/kids",
+        element: <KidsZone />
       }
     ]
   },
