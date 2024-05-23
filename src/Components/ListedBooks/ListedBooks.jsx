@@ -1,20 +1,41 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
+import { getStoredReadBooks } from "../../Utility/localStorage";
+import SingleListedBook from "../DisplayListedBooks/SingleListedBook";
 const ListedBooks = () => {
     const books = useLoaderData();
 
     const [readBooks, setReadBooks] = useState([]);
-    const [wishlistBooks, setWishlistBook] = useState([]);
+    // const [wishlistBooks, setWishlistBook] = useState([]);
     const [displayBooks, setDisplayBooks] = useState([]);
 
     const hanldeBookFilter = (filter) => {
         if (filter === 'rating') {
-            const bookRating = readBooks.filter(book => book.rating > book.rating)
+            const bookRating = readBooks.filter(book => book.rating > 0);
+            bookRating.sort((a, b) => b.rating - a.rating);
+            setDisplayBooks(bookRating);
         }
         else if (filter === 'pages') {
-
+            const bookPages = readBooks.sort((a, b) => b.totalPages - a.totalPages);
+            setDisplayBooks(bookPages);
+        }
+        else if (filter === 'publishYear') {
+            const bookPublishYear = readBooks.sort((a, b) => b.yearOfPublishing - a.yearOfPublishing);
+            setDisplayBooks(bookPublishYear);
         }
     };
+
+    useEffect(() => {
+        const storedReadBooksIds = getStoredReadBooks();
+        if (books.length) {
+            const booksRead = books.filter(book => storedReadBooksIds.includes(book.bookId))
+            // console.log("books", books)
+            setReadBooks(booksRead);
+            // console.log('books read', booksRead)
+            // console.log('stored id', storedReadBooksIds)
+            setDisplayBooks(booksRead);
+        }
+    }, [books])
 
     return (
         <div className="mt-9">
@@ -32,9 +53,9 @@ const ListedBooks = () => {
                         </div>
                     </div>
                     <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-                        <li><a>Rating</a></li>
-                        <li><a>Number Of Pages</a></li>
-                        <li><a>Published Year</a></li>
+                        <li onClick={() => hanldeBookFilter('rating')}><a>Rating</a></li>
+                        <li onClick={() => hanldeBookFilter('pages')}><a>Number Of Pages</a></li>
+                        <li onClick={() => hanldeBookFilter('publishYear')}><a>Published Year</a></li>
                     </ul>
                 </div>
             </div>
@@ -44,7 +65,9 @@ const ListedBooks = () => {
             </div>
 
             <div className="mt-8">
-
+                {
+                    displayBooks.map(book => <SingleListedBook key={book.bookId} book={book} />)
+                }
             </div>
         </div>
     );

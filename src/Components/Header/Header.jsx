@@ -4,7 +4,7 @@ const Header = () => {
     const links = <>
         <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="/listedbooks">Listed Books</NavLink></li>
-        <li><NavLink to="/read">Pages to Read</NavLink></li>
+        <li><NavLink to="/pagestoread">Pages to Read</NavLink></li>
         <li><NavLink to="/kids">Kids Zone</NavLink></li>
         <li><NavLink to="/deals">Best Deals</NavLink></li>
     </>
