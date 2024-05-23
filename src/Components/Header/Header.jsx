@@ -6,7 +6,7 @@ const Header = () => {
         <li><NavLink to="/listedbooks">Listed Books</NavLink></li>
         <li><NavLink to="/pagestoread">Pages to Read</NavLink></li>
         <li><NavLink to="/kids">Kids Zone</NavLink></li>
-        <li><NavLink to="/deals">Best Deals</NavLink></li>
+        <li><NavLink to="/bestdeals">Best Deals</NavLink></li>
     </>
     return (
         <div className="navbar bg-base-100 mt-5">

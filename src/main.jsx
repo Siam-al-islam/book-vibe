@@ -12,6 +12,7 @@ import BookDetails from './Components/BookDetails/BookDetails.jsx';
 import ListedBooks from './Components/ListedBooks/ListedBooks.jsx';
 import PagesToRead from './Components/PageToRead/PagesToRead.jsx';
 import KidsZone from './Components/KidsZone/KidsZone.jsx';
+import BestDeals from './Components/BestDeals/BestDeals.jsx';
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
       {
         path: "/kids",
         element: <KidsZone />
+      },
+      {
+        path: "/bestdeals",
+        element: <BestDeals />
       }
     ]
   },
