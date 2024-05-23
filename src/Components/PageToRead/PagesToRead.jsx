@@ -1,22 +1,8 @@
 import { useLoaderData } from "react-router-dom";
 import { Bar, BarChart, Cell, ResponsiveContainer, XAxis, YAxis } from "recharts";
-import { getStoredReadBooks } from "../../Utility/localStorage";
-import { useEffect, useState } from "react";
 
 const PagesToRead = () => {
-    const storedReadBooksIds = getStoredReadBooks();
-
-    const [addedBooks, setAddedBooks] = useState([]);
-
-
     const booksData = useLoaderData();
-
-    useEffect(() => {
-        if (booksData.length) {
-            const booksRead = booksData.filter(book => storedReadBooksIds.includes(Number(book.bookId)));
-            setAddedBooks(booksRead);
-        }
-    }, []);
 
     const colors = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', 'red', 'pink'];
 
@@ -37,9 +23,9 @@ const PagesToRead = () => {
     return (
         <div className="mt-12 max-w-[1000px] mx-auto">
             <ResponsiveContainer width="100%" height={500}>
-                <BarChart data={addedBooks.map(book => book.totalPages)} >
+                <BarChart data={booksData} >
                     {/* <Bar dataKey={"name"}></Bar> */}
-                    <XAxis dataKey={addedBooks.bookName} />
+                    <XAxis dataKey={"bookName"} />
                     <YAxis />
                     <Bar dataKey={"totalPages"} shape={<TriangleBar />}>
                         {booksData.map((entry, index) => (
