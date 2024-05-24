@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { NavLink, useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import { getStoredReadBooks, getStoredWishlistBooks } from "../../Utility/localStorage";
 import SingleListedBook from "../DisplayListedBooks/SingleListedBook";
 
@@ -72,8 +72,8 @@ const ListedBooks = () => {
                 </div>
             </div>
             <div className="flex">
-                <NavLink className="px-5 py-3" onClick={hanldeReadBooks}>Read Books</NavLink>
-                <NavLink className="px-5 py-3" onClick={hanldeWishlistBooks}>Wishlist Books</NavLink>
+                <Link className="px-5 py-3" onClick={hanldeReadBooks}>Read Books</Link>
+                <Link className="px-5 py-3" onClick={hanldeWishlistBooks}>Wishlist Books</Link>
             </div>
 
             <div className="mt-8 space-y-6">
