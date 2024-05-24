@@ -6,7 +6,6 @@ import bookData from '../../data/books.json'
 
 const ListedBooks = () => {
     const books = bookData;
-    console.log('bookData: ', bookData);
 
     const [addedBooks, setAddedBooks] = useState([]);
     const [displayBooks, setDisplayBooks] = useState([]);

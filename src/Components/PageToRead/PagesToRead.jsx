@@ -1,9 +1,7 @@
-import { useLoaderData } from "react-router-dom";
 import { Bar, BarChart, Cell, ResponsiveContainer, XAxis, YAxis } from "recharts";
+import booksData from '../../data/books.json'
 
 const PagesToRead = () => {
-    const booksData = useLoaderData();
-
     const colors = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', 'red', 'pink'];
 
     const getPath = (x, y, width, height) => {

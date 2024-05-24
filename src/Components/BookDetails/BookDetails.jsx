@@ -1,11 +1,12 @@
-import { useLoaderData, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import { saveReadBooks, saveWishlistBooks } from "../../Utility/localStorage";
 import { useState } from "react";
+import booksData from '../../data/books.json'
 
 const BookDetails = () => {
-    const books = useLoaderData();
+    const books = booksData;
     const { bookId } = useParams();
     const idInt = parseInt(bookId);
     const book = books.find(book => book.bookId == idInt);
