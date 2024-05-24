@@ -1,0 +1,148 @@
+[
+    {
+        "bookId": "1",
+        "bookName": "The Great Gatsby",
+        "author": "F. Scott Fitzgerald",
+        "image": "https://i.postimg.cc/7ZbFHGJ3/gastby.png",
+        "review": "A classic novel exploring wealth, love, and the American Dream through the tragic story of Jay Gatsby and his unrequited love for Daisy Buchanan.",
+        "totalPages": 180,
+        "rating": 4.5,
+        "category": "Fiction",
+        "tags": [
+            "classic",
+            "novel",
+            "1920s"
+        ],
+        "publisher": "Charles Scribner's Sons",
+        "yearOfPublishing": 1925
+    },
+    {
+        "bookId": "2",
+        "bookName": "To Kill a Mockingbird",
+        "author": "Harper Lee",
+        "image": "https://i.postimg.cc/ZKYkQDTD/toKill.png",
+        "review": "A profound exploration of racial injustice in the Deep South, seen through the eyes of young Scout Finch, whose father, Atticus, defends a wrongfully accused black man.",
+        "totalPages": 281,
+        "rating": 4.8,
+        "category": "Fiction",
+        "tags": [
+            "classic",
+            "civil rights"
+        ],
+        "publisher": "J.B. Lippincott & Co.",
+        "yearOfPublishing": 1960
+    },
+    {
+        "bookId": "3",
+        "bookName": "1984",
+        "author": "George Orwell",
+        "image": "https://i.postimg.cc/D02MPdnm/61-Zew-DE3be-L-AC-UF1000-1000-QL80.jpg",
+        "review": "A dystopian novel warning against totalitarianism, following Winston Smith as he navigates a society under oppressive surveillance and control by the Party and Big Brother.",
+        "totalPages": 328,
+        "rating": 4.6,
+        "category": "Science Fiction",
+        "tags": [
+            "political",
+            "classic"
+        ],
+        "publisher": "Secker & Warburg",
+        "yearOfPublishing": 1949
+    },
+    {
+        "bookId": "4",
+        "bookName": "Pride and Prejudice",
+        "author": "Jane Austen",
+        "image": "https://i.postimg.cc/qRcFKZf9/61-H3-Bv-N-na-L-AC-UF1000-1000-QL80.jpg",
+        "review": "A timeless romance that critiques societal expectations through the story of Elizabeth Bennet and Mr. Darcy's evolving relationship amid themes of love and social status.",
+        "totalPages": 279,
+        "rating": 4.7,
+        "category": "Romance",
+        "tags": [
+            "romance",
+            "19th century"
+        ],
+        "publisher": "T. Egerton",
+        "yearOfPublishing": 1813
+    },
+    {
+        "bookId": "5",
+        "bookName": "The Catcher in the Rye",
+        "author": "J.D. Salinger",
+        "image": "https://i.postimg.cc/J0MwMpj0/catcher.png",
+        "review": "Capturing teenage angst and alienation, this novel follows Holden Caulfield's experiences in New York City after being expelled from prep school.",
+        "totalPages": 214,
+        "rating": 4.3,
+        "category": "Fiction",
+        "tags": [
+            "classic",
+            "teenage"
+        ],
+        "publisher": "Little, Brown and Company",
+        "yearOfPublishing": 1951
+    },
+    {
+        "bookId": "6",
+        "bookName": "The Hobbit",
+        "author": "J.R.R. Tolkien",
+        "image": "https://i.postimg.cc/x8RwCLPR/hobbit-cover-670x1024.jpg",
+        "review": "An enchanting fantasy following Bilbo Baggins on an unexpected adventure with dwarves to reclaim a lost kingdom, encountering dragons, trolls, and more.",
+        "totalPages": 310,
+        "rating": 4.9,
+        "category": "Fantasy",
+        "tags": [
+            "fantasy",
+            "adventure"
+        ],
+        "publisher": "George Allen & Unwin",
+        "yearOfPublishing": 1937
+    },
+    {
+        "bookId": "7",
+        "bookName": "Moby-Dick",
+        "author": "Herman Melville",
+        "image": "https://i.postimg.cc/G3kG1nrF/moby.jpg",
+        "review": "A seafaring adventure and a profound examination of obsession, as Captain Ahab hunts the elusive white whale, Moby-Dick, across the oceans.",
+        "totalPages": 585,
+        "rating": 4.2,
+        "category": "Fiction",
+        "tags": [
+            "classic",
+            "adventure",
+            "sea"
+        ],
+        "publisher": "Harper & Brothers",
+        "yearOfPublishing": 1851
+    },
+    {
+        "bookId": "8",
+        "bookName": "The Alchemist",
+        "author": "Paulo Coelho",
+        "image": "https://i.postimg.cc/1Xcq0wMC/alchemist.jpg",
+        "review": "A philosophical tale about Santiago, a shepherd boy, who dreams of finding a worldly treasure and embarks on a journey of self-discovery and personal legend.",
+        "totalPages": 208,
+        "rating": 4.7,
+        "category": "Adventure",
+        "tags": [
+            "philosophical",
+            "journey"
+        ],
+        "publisher": "HarperOne",
+        "yearOfPublishing": 1988
+    },
+    {
+        "bookId": "9",
+        "bookName": "Brave New World",
+        "author": "Aldous Huxley",
+        "image": "https://i.postimg.cc/9FCTmgFv/new-world.jpg",
+        "review": "A dystopian vision of a future society controlled by technology and conformity, where human emotions and individuality are suppressed for the sake of stability.",
+        "totalPages": 268,
+        "rating": 4.4,
+        "category": "Science Fiction",
+        "tags": [
+            "future",
+            "classic"
+        ],
+        "publisher": "Chatto & Windus",
+        "yearOfPublishing": 1932
+    }
+]

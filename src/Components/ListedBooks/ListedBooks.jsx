@@ -2,9 +2,11 @@ import { useEffect, useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import { getStoredReadBooks, getStoredWishlistBooks } from "../../Utility/localStorage";
 import SingleListedBook from "../DisplayListedBooks/SingleListedBook";
+import bookData from '../../data/books.json'
 
 const ListedBooks = () => {
-    const books = useLoaderData();
+    const books = bookData;
+    console.log('bookData: ', bookData);
 
     const [addedBooks, setAddedBooks] = useState([]);
     const [displayBooks, setDisplayBooks] = useState([]);
