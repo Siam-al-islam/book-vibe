@@ -5,7 +5,7 @@ import SingleListedBook from "../DisplayListedBooks/SingleListedBook";
 
 const ListedBooks = () => {
     const books = useLoaderData();
-
+    console.log('books data: ', books);
     const [addedBooks, setAddedBooks] = useState([]);
     const [displayBooks, setDisplayBooks] = useState([]);
 
