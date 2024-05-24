@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, useLoaderData } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { getStoredReadBooks, getStoredWishlistBooks } from "../../Utility/localStorage";
 import SingleListedBook from "../DisplayListedBooks/SingleListedBook";
 import bookData from '../../data/books.json'
